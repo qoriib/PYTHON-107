@@ -86,7 +86,6 @@ def main():
             y_default = [c for c in DEFAULT_Y if c in df.columns]
             demo_default = [c for c in DEFAULT_DEMOGRAPHICS if c in df.columns]
             st.subheader(t("variable_section", lang))
-            st.caption(t("variable_caption", lang))
             x_cols = st.multiselect(
                 t("x_label", lang), df.columns.tolist(), default=x_default
             )
@@ -248,10 +247,32 @@ def main():
 
     elif nav == "Export":
         st.subheader(t("export_header", lang))
-        if x_total is None and y_total is None:
+        x_export = x_total
+        y_export = y_total
+        if x_export is None or y_export is None:
+            # Fallback: compute using default columns if available
+            x_fallback = [c for c in DEFAULT_X if c in df.columns]
+            y_fallback = [c for c in DEFAULT_Y if c in df.columns]
+            cols_needed = list(set(x_fallback + y_fallback))
+            if cols_needed:
+                numeric_df_exp = coerce_numeric(df, cols_needed)
+                if x_export is None and x_fallback:
+                    x_export = (
+                        numeric_df_exp[x_fallback].mean(axis=1)
+                        if agg_method == "Mean"
+                        else numeric_df_exp[x_fallback].sum(axis=1)
+                    )
+                if y_export is None and y_fallback:
+                    y_export = (
+                        numeric_df_exp[y_fallback].mean(axis=1)
+                        if agg_method == "Mean"
+                        else numeric_df_exp[y_fallback].sum(axis=1)
+                    )
+
+        if x_export is None and y_export is None:
             st.info(t("export_prompt", lang))
         else:
-            csv_bytes = download_with_totals(df, x_total, y_total)
+            csv_bytes = download_with_totals(df, x_export, y_export)
             st.download_button(
                 label=t("download_label", lang),
                 data=csv_bytes,
