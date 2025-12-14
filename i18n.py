@@ -1,0 +1,143 @@
+TEXT = {
+    "id": {
+        "title": "Analisis Perilaku Belanja Online vs Kontrol Diri Finansial (Gen Z)",
+        "description_title": "Ringkasan Proyek",
+        "description": (
+            "Aplikasi ini menganalisis survei *Pengaruh Perilaku Belanja Online terhadap Kemampuan Kontrol Diri Finansial pada Gen Z*."
+        ),
+        "description_steps": (
+            "- Import CSV dari Google Forms.\n"
+            "- Gunakan pilihan default item X (Perilaku Belanja Online) dan Y (Kontrol Diri Finansial) atau sesuaikan.\n"
+            "- Pilih variabel demografi untuk tabel frekuensi.\n"
+            "- Tinjau statistik deskriptif, korelasi (Pearson & Spearman), serta unduh data dengan skor komposit."
+        ),
+        "upload_section": "Import data",
+        "file_label": "Pilih berkas CSV",
+        "upload_needed": "Unggah berkas CSV untuk mulai.",
+        "data_loaded": "Data sudah dimuat ({rows} baris, {cols} kolom). Anda dapat memilih menu lain di sidebar.",
+        "navigation": "Navigasi",
+        "nav_prompt": "Pilih menu",
+        "nav_upload": "Import",
+        "nav_demo": "Demographics",
+        "nav_desc": "Descriptive Statistics",
+        "nav_assoc": "Association Analysis",
+        "nav_export": "Export",
+        "variable_section": "Pemilihan Variabel",
+        "variable_caption": "Kolom default sudah dipilih; sesuaikan bila perlu.",
+        "x_label": "Item Variabel X (Perilaku Belanja Online)",
+        "y_label": "Item Variabel Y (Kontrol Diri Finansial)",
+        "demo_label": "Variabel demografi",
+        "agg_label": "Metode agregasi skor komposit",
+        "mean": "Mean",
+        "sum": "Sum",
+        "need_upload_menu": "Unggah data terlebih dahulu untuk mengaktifkan menu lain.",
+        "data_loaded_brief": "Data dimuat ({rows} baris, {cols} kolom). Silakan pilih menu lain di sidebar.",
+        "demographics_header": "Analisis Demografi",
+        "demo_prompt": "Pilih setidaknya satu variabel demografi.",
+        "desc_header": "Statistik Deskriptif",
+        "desc_prompt": "Pilih kolom Likert untuk menghitung statistik.",
+        "x_item": "Variabel X: Per item",
+        "y_item": "Variabel Y: Per item",
+        "x_total": "Skor Komposit X_total",
+        "y_total": "Skor Komposit Y_total",
+        "viz_header": "Visualisasi",
+        "viz_prompt": "Skor komposit belum tersedia untuk dibuat grafik.",
+        "assoc_header": "Analisis Hubungan X_total dan Y_total",
+        "assoc_prompt": "Pilih item X dan Y untuk menghitung skor komposit terlebih dahulu.",
+        "pairs": "Jumlah pasangan data: {n}",
+        "assoc_table_title": "Ringkasan korelasi",
+        "method": "Metode",
+        "coef": "Koefisien",
+        "p_value": "p-value",
+        "strength_col": "Kekuatan",
+        "direction_col": "Arah",
+        "significant": "Signifikan (p < 0.05)",
+        "ci": "95% CI (Pearson saja)",
+        "pearson": "- Pearson r: **{r:.3f}** (p = {p:.4f}) - {strength}, direction: {direction}",
+        "spearman": "- Spearman rho: **{r:.3f}** (p = {p:.4f}) - {strength}",
+        "interpret_header": "Interpretasi Singkat",
+        "interpret_lines": "- Nilai p < 0.05: hubungan signifikan secara statistik; p >= 0.05: tidak signifikan.\n"
+        "- Koefisien positif: ketika perilaku belanja online naik, kontrol diri finansial juga naik.\n"
+        "- Koefisien negatif: ketika perilaku belanja online naik, kontrol diri finansial turun.\n"
+        "- Periksa kekuatan (very weak s.d. very strong) untuk menyebut seberapa erat hubungan.",
+        "export_header": "Unduh Data dengan Skor Komposit",
+        "export_prompt": "Hitung X_total dan/atau Y_total sebelum mengunduh.",
+        "download_label": "Download CSV dengan X_total dan Y_total",
+        "download_caption": "Berkas mencakup kolom asli ditambah X_total / Y_total (jika tersedia).",
+        "direction_pos": "Positive",
+        "direction_neg": "Negative",
+        "language": "Bahasa",
+    },
+    "en": {
+        "title": "Online Shopping Behavior vs Financial Self-Control (Gen Z)",
+        "description_title": "Project Overview",
+        "description": "This app analyzes the survey *Impact of Online Shopping Behavior on Financial Self-Control among Gen Z*.",
+        "description_steps": (
+            "- Import the CSV exported from Google Forms.\n"
+            "- Use default X (Online Shopping Behavior) and Y (Financial Self-Control) items or adjust as needed.\n"
+            "- Select demographic variables for frequency tables.\n"
+            "- Review descriptive stats, correlations (Pearson & Spearman), and download data with composite scores."
+        ),
+        "upload_section": "Import data",
+        "file_label": "Select CSV file",
+        "upload_needed": "Upload a CSV file to start.",
+        "data_loaded": "Data loaded ({rows} rows, {cols} columns). You can open other menus from the sidebar.",
+        "navigation": "Navigation",
+        "nav_prompt": "Choose menu",
+        "nav_upload": "Import",
+        "nav_demo": "Demographics",
+        "nav_desc": "Descriptive Statistics",
+        "nav_assoc": "Association Analysis",
+        "nav_export": "Export",
+        "variable_section": "Variable Selection",
+        "variable_caption": "Default columns are pre-selected; adjust if needed.",
+        "x_label": "Variable X items (Online Shopping Behavior)",
+        "y_label": "Variable Y items (Financial Self-Control)",
+        "demo_label": "Demographic variables",
+        "agg_label": "Composite score aggregation",
+        "mean": "Mean",
+        "sum": "Sum",
+        "need_upload_menu": "Upload data first to activate other menus.",
+        "data_loaded_brief": "Data loaded ({rows} rows, {cols} columns). Please pick another menu from the sidebar.",
+        "demographics_header": "Demographic Analysis",
+        "demo_prompt": "Select at least one demographic variable.",
+        "desc_header": "Descriptive Statistics",
+        "desc_prompt": "Select Likert columns to compute statistics.",
+        "x_item": "Variable X: Per item",
+        "y_item": "Variable Y: Per item",
+        "x_total": "Composite Score X_total",
+        "y_total": "Composite Score Y_total",
+        "viz_header": "Visualization",
+        "viz_prompt": "Composite scores are not available yet for plotting.",
+        "assoc_header": "Association Analysis of X_total and Y_total",
+        "assoc_prompt": "Choose X and Y items to compute composite scores first.",
+        "pairs": "Number of paired data: {n}",
+        "assoc_table_title": "Correlation summary",
+        "method": "Method",
+        "coef": "Coefficient",
+        "p_value": "p-value",
+        "strength_col": "Strength",
+        "direction_col": "Direction",
+        "significant": "Significant (p < 0.05)",
+        "ci": "95% CI (Pearson only)",
+        "pearson": "- Pearson r: **{r:.3f}** (p = {p:.4f}) - {strength}, direction: {direction}",
+        "spearman": "- Spearman rho: **{r:.3f}** (p = {p:.4f}) - {strength}",
+        "interpret_header": "Quick Interpretation",
+        "interpret_lines": "- p-value < 0.05: statistically significant; p >= 0.05: not significant.\n"
+        "- Positive coefficient: higher online shopping behavior relates to higher financial self-control.\n"
+        "- Negative coefficient: higher online shopping behavior relates to lower financial self-control.\n"
+        "- Check strength (very weak to very strong) to describe closeness.",
+        "export_header": "Download Data with Composite Scores",
+        "export_prompt": "Compute X_total and/or Y_total before downloading.",
+        "download_label": "Download CSV with X_total and Y_total",
+        "download_caption": "File includes original columns plus X_total / Y_total (if available).",
+        "direction_pos": "Positive",
+        "direction_neg": "Negative",
+        "language": "Language",
+    },
+}
+
+
+def t(key: str, lang: str) -> str:
+    """Translate key based on selected language."""
+    return TEXT.get(lang, TEXT["id"]).get(key, key)
