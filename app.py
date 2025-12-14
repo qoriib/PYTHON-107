@@ -41,7 +41,6 @@ DEFAULT_Y = [
 ]
 
 DEFAULT_DEMOGRAPHICS = [
-    "Nama Anda",
     "  Berapa usia Anda?  ",
     "Jenis Kelamin  ",
     "Pekerjaan Anda",
