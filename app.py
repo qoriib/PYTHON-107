@@ -105,7 +105,7 @@ def main():
 
     with st.sidebar:
         st.divider()
-        st.caption("Kelompok")
+        st.caption("Anggota Kelompok")
         st.image("imgs/aurora.png", caption="Aurora Hawa Sabrina - 004202200011", use_container_width=True)
         st.image("imgs/alifiya.png", caption="Alifiya Chairani Salsabila - 004202200009", use_container_width=True)
         st.image("imgs/rachel.png", caption="Rachel Ghina Charamoy - 00202200038", use_container_width=True)
