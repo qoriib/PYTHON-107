@@ -103,6 +103,13 @@ def main():
             x_cols, y_cols, demographics, agg_method = [], [], [], "Mean"
             st.info(t("need_upload_menu", lang))
 
+    with st.sidebar:
+        st.divider()
+        st.caption("Kelompok")
+        st.image("imgs/aurora.png", caption="Aurora Hawa Sabrina - 004202200011", use_container_width=True)
+        st.image("imgs/alifiya.png", caption="Alifiya Chairani Salsabila - 004202200009", use_container_width=True)
+        st.image("imgs/rachel.png", caption="Rachel Ghina Charamoy - 00202200038", use_container_width=True)
+
     if st.session_state.df is None:
         if nav == "Import":
             with st.container():
